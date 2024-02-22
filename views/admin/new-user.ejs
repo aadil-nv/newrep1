@@ -1,0 +1,30 @@
+<% include('../layouts/header.ejs') %>
+
+
+<h1>Add NewUser Form </h1>
+
+<form action="" method="post" >
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <br><br>
+    <input type="text" name="mno" placeholder="Enter Your MobileNo" required>
+    <br><br>
+    <input type="submit" value="Add user">
+    <br><br>
+
+</form>
+
+
+<% 
+if(typeof message !== 'undefined'){
+    %> 
+    <p style="color: red;"><%= message %></p>
+    
+    <%
+} 
+%>
+
+<a href="/admin/dashboard">Go Back</a>
+
+<% include('../layouts/footer.ejs') %>

@@ -1,0 +1,28 @@
+<% include('../layouts/header.ejs') %>
+<% include('../layouts/footer.ejs') %>
+
+<h1>User Regisration Form </h1>
+
+<form action="" method="post" >
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <br><br>
+    <input type="text" name="mno" placeholder="Enter Your MobileNo" required>
+    <br><br>
+    <input type="password" name="password" placeholder="Enter Your Password" required>
+    <br><br>
+    <input type="submit" value="Register">
+    <br><br>
+
+</form>
+
+
+<% 
+if(typeof message !== 'undefined'){
+    %> 
+    <p style="color: green;"><%= message %></p>
+    
+    <%
+} 
+%>
